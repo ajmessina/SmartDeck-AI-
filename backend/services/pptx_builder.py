@@ -5,7 +5,6 @@ from pptx.enum.text import PP_ALIGN, MSO_ANCHOR, MSO_AUTO_SIZE
 from pptx.enum.shapes import MSO_SHAPE
 from services.themes import get_theme
 import os
-import math
 
 class PPTXBuilder:
     """
