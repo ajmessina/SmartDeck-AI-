@@ -5,16 +5,14 @@ from slowapi.util import get_remote_address
 from slowapi.errors import RateLimitExceeded
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse, JSONResponse
-from dotenv import load_dotenv
+
 import shutil
 import os
 import re
 import uuid
 from typing import List, Optional
 
-# Load environment variables
-# Load environment variables (replaced by pydantic-settings in config.py)
-# load_dotenv() - handled by config.Settings
+from config import settings
 
 import logging
 import sys
