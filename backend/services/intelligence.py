@@ -1,4 +1,5 @@
-import google.generativeai as genai
+from google import genai
+from google.genai import types
 import json
 import time
 import logging
@@ -11,11 +12,10 @@ class IntelligenceService:
     def __init__(self, api_key: str = None):
         self.api_key = api_key
         if api_key:
-            genai.configure(api_key=api_key)
-            self.model_name = 'gemini-2.5-flash'
-            self.model = genai.GenerativeModel(self.model_name)
+            self.client = genai.Client(api_key=api_key)
+            self.model_name = 'gemini-2.0-flash'
         else:
-            self.model = None
+            self.client = None
             self.model_name = None
 
     # =========================================================================
@@ -218,7 +218,10 @@ class IntelligenceService:
                 DATA:
                 {raw_text[:5000]}
                 """
-                response = self.model.generate_content(summary_prompt)
+                response = self.client.models.generate_content(
+                    model=self.model_name,
+                    contents=summary_prompt
+                )
                 summary = response.text.strip()
                 logger.info(f"Content analysis: {summary[:100]}...")
             except Exception as e:
@@ -239,9 +242,10 @@ class IntelligenceService:
     def _call_gemini(self, prompt: str) -> dict:
         """Make a call to Gemini API and parse JSON response."""
         try:
-            response = self.model.generate_content(
-                prompt,
-                generation_config=genai.GenerationConfig(
+            response = self.client.models.generate_content(
+                model=self.model_name,
+                contents=prompt,
+                config=types.GenerateContentConfig(
                     temperature=0.4,
                     response_mime_type="application/json"
                 )
