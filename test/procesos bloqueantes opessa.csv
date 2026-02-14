@@ -1,0 +1,4 @@
+ID Proceso,Programa,Acción,Estado,Impacto
+"83, 126",Data Integration,INSERT INTO Users... UPDATE Users...,Escribiendo,Bloquea la tabla de Usuarios (bloqueante)
+63,Data Integration,DROP TABLE [NFP_STG]... MERGE,Destruyendo,Borra y reescribe tablas temporales de transacciones.
+57 (Tú),Power BI,SELECT * FROM VW_SOPORTE,Esperando,Intenta leer Usuarios + Transacciones y se queda congelado.

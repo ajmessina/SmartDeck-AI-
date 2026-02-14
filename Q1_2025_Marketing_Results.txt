@@ -1,0 +1,45 @@
+Q1 2025 Marketing Campaign Results
+
+Campaign Overview:
+- Campaign Name: "Transform Your Workflow"
+- Duration: January 1 - March 31, 2025
+- Budget: $250,000
+- Actual Spend: $235,000 (6% under budget)
+
+Performance Metrics:
+- Total Impressions: 12.5M
+- Click-Through Rate: 3.2% (industry avg: 2.1%)
+- Conversion Rate: 8.5%
+- Cost Per Lead: $45
+- Cost Per Acquisition: $520
+
+Lead Generation:
+- Total Leads: 5,200
+- Marketing Qualified Leads (MQL): 2,800
+- Sales Qualified Leads (SQL): 1,100
+- Closed Deals: 450
+- Pipeline Value: $6.3M
+
+Channel Performance:
+- LinkedIn Ads: 35% of leads, $38 CPL
+- Google Search: 28% of leads, $52 CPL
+- Content Marketing: 22% of leads, $28 CPL
+- Email Campaigns: 15% of leads, $15 CPL
+
+Top Performing Content:
+1. "5 Ways to Automate Your Sales Process" - 2,800 downloads
+2. "ROI Calculator Tool" - 1,900 conversions
+3. "Customer Success Webinar Series" - 1,200 registrations
+
+Geographic Insights:
+- United States: 60% of leads
+- United Kingdom: 18% of leads
+- Germany: 12% of leads
+- Canada: 10% of leads
+
+Recommendations for Q2:
+- Increase LinkedIn budget by 25%
+- Launch video content series
+- Expand into France and Spain markets
+- A/B test new landing page designs
+- Implement account-based marketing for enterprise

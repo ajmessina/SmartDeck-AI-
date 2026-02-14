@@ -1,0 +1,79 @@
+erfecto! Ahora vamos a ver el estado actual y luego configurar tu API key:
+
+Ran command
+…\backend > .\toggle-mode.ps1 status
+
+
+==================================================
+  SmartDeck AI - Gemini Configuration Status
+==================================================
+
+  Current Mode: MOCK (Demo Mode)
+  API Key: Not configured
+
+  The system will use sample data for demonstrations.
+
+==================================================
+
+
+Always run
+Exit code 0
+Perfecto! Ahora voy a crear una guía rápida para que configures tu API key:
+
+🔑 Configuración de API Key de Gemini
+Opción 1: Editar Manualmente el Archivo .env
+Abre el archivo: 
+backend.env
+Busca la línea:
+bash
+# GEMINI_API_KEY=AIzaSy...your_actual_key_here
+Reemplaza con tu API key real:
+bash
+GEMINI_API_KEY=AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+(Asegúrate de quitar el # al inicio)
+Guarda el archivo
+Opción 2: Usar el Script de Toggle
+Después de agregar tu API key al archivo 
+.env
+, ejecuta:
+
+powershell
+cd backend
+.\toggle-mode.ps1 real
+📝 Pasos Completos para Probar
+Agrega tu API key al archivo 
+.env
+ (como se muestra arriba)
+Verifica el modo:
+powershell
+.\toggle-mode.ps1 status
+Reinicia el backend:
+powershell
+# Detén el servidor actual (Ctrl+C en la terminal donde corre)
+# Luego inicia de nuevo:
+.\venv\Scripts\python.exe main.py
+Deberías ver:
+[SmartDeck] Backend initialized
+[Gemini AI] ENABLED
+Prueba la aplicación:
+Ve a http://localhost:5173/
+Sube archivos (Excel, CSV, Word)
+Haz clic en "Assemble Executive Deck"
+Gemini analizará tus datos reales
+Volver a MOCK mode (cuando termines de probar):
+powershell
+.\toggle-mode.ps1 mock
+# Reinicia el backend
+🎯 Comandos Rápidos
+Comando	Descripción
+.\toggle-mode.ps1 status	Ver modo actual
+.\toggle-mode.ps1 real	Activar Gemini AI
+.\toggle-mode.ps1 mock	Desactivar Gemini AI
+💡 Nota Importante
+Cada vez que cambies de modo, debes reiniciar el backend para que los cambios tomen efecto. El script te recordará esto automáticamente.
+
+cd "c:\Users\Corebii\Documents\Desarrollos Antigravity\smart-presentation-generator\frontend"
+PS C:\Users\Corebii\Documents\Desarrollos Antigravity\smart-presentation-generator\frontend> npm run dev
+
+Detener puerto
+Get-NetTCPConnection -LocalPort 8000 -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force }

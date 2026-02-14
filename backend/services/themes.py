@@ -1,0 +1,153 @@
+"""
+Design Theme System for SmartDeck AI
+Each theme defines a complete visual identity for presentations.
+"""
+from pptx.dml.color import RGBColor
+
+
+THEMES = {
+    "corporate_navy": {
+        "name": "Corporate Navy",
+        "description": "Classic executive style with navy & teal accents",
+        "preview_colors": ["#1a1a2e", "#14b8a6", "#f8fafc"],
+        "dark_bg": RGBColor(26, 26, 46),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(248, 250, 252),
+        "card_bg": RGBColor(241, 245, 249),
+        "text_primary": RGBColor(51, 65, 85),
+        "text_secondary": RGBColor(100, 116, 139),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(203, 213, 225),
+        "accent": RGBColor(20, 184, 166),
+        "accent_dark": RGBColor(15, 118, 110),
+        "accent_light": RGBColor(204, 251, 241),
+        "danger": RGBColor(244, 63, 94),
+        "warning": RGBColor(245, 158, 11),
+        "info": RGBColor(59, 130, 246),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+    "midnight_blue": {
+        "name": "Midnight Blue",
+        "description": "Deep blue palette with electric blue accents",
+        "preview_colors": ["#0f172a", "#3b82f6", "#f1f5f9"],
+        "dark_bg": RGBColor(15, 23, 42),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(241, 245, 249),
+        "card_bg": RGBColor(226, 232, 240),
+        "text_primary": RGBColor(30, 41, 59),
+        "text_secondary": RGBColor(100, 116, 139),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(203, 213, 225),
+        "accent": RGBColor(59, 130, 246),
+        "accent_dark": RGBColor(29, 78, 216),
+        "accent_light": RGBColor(219, 234, 254),
+        "danger": RGBColor(239, 68, 68),
+        "warning": RGBColor(234, 179, 8),
+        "info": RGBColor(99, 102, 241),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+    "emerald_pro": {
+        "name": "Emerald Professional",
+        "description": "Sophisticated green tones for sustainability & growth",
+        "preview_colors": ["#1a2e1a", "#10b981", "#f0fdf4"],
+        "dark_bg": RGBColor(26, 46, 26),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(240, 253, 244),
+        "card_bg": RGBColor(220, 252, 231),
+        "text_primary": RGBColor(20, 83, 45),
+        "text_secondary": RGBColor(74, 122, 86),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(187, 247, 208),
+        "accent": RGBColor(16, 185, 129),
+        "accent_dark": RGBColor(4, 120, 87),
+        "accent_light": RGBColor(209, 250, 229),
+        "danger": RGBColor(220, 38, 38),
+        "warning": RGBColor(217, 119, 6),
+        "info": RGBColor(37, 99, 235),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+    "sunset_warm": {
+        "name": "Sunset Warm",
+        "description": "Bold warm tones with vibrant orange & amber accents",
+        "preview_colors": ["#451a03", "#f97316", "#fff7ed"],
+        "dark_bg": RGBColor(69, 26, 3),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(255, 247, 237),
+        "card_bg": RGBColor(255, 237, 213),
+        "text_primary": RGBColor(67, 20, 7),
+        "text_secondary": RGBColor(154, 52, 18),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(253, 186, 116),
+        "accent": RGBColor(249, 115, 22),
+        "accent_dark": RGBColor(194, 65, 12),
+        "accent_light": RGBColor(255, 237, 213),
+        "danger": RGBColor(220, 38, 38),
+        "warning": RGBColor(245, 158, 11),
+        "info": RGBColor(37, 99, 235),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+    "royal_purple": {
+        "name": "Royal Purple",
+        "description": "Elegant purple with gold accents for premium feel",
+        "preview_colors": ["#2e1065", "#a855f7", "#faf5ff"],
+        "dark_bg": RGBColor(46, 16, 101),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(250, 245, 255),
+        "card_bg": RGBColor(243, 232, 255),
+        "text_primary": RGBColor(59, 7, 100),
+        "text_secondary": RGBColor(107, 33, 168),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(216, 180, 254),
+        "accent": RGBColor(168, 85, 247),
+        "accent_dark": RGBColor(126, 34, 206),
+        "accent_light": RGBColor(233, 213, 255),
+        "danger": RGBColor(239, 68, 68),
+        "warning": RGBColor(234, 179, 8),
+        "info": RGBColor(59, 130, 246),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+    "monochrome_minimal": {
+        "name": "Monochrome Minimal",
+        "description": "Ultra-clean black & white with sharp contrast",
+        "preview_colors": ["#18181b", "#71717a", "#fafafa"],
+        "dark_bg": RGBColor(24, 24, 27),
+        "light_bg": RGBColor(255, 255, 255),
+        "subtle_bg": RGBColor(250, 250, 250),
+        "card_bg": RGBColor(244, 244, 245),
+        "text_primary": RGBColor(39, 39, 42),
+        "text_secondary": RGBColor(113, 113, 122),
+        "text_on_dark": RGBColor(255, 255, 255),
+        "border": RGBColor(212, 212, 216),
+        "accent": RGBColor(39, 39, 42),
+        "accent_dark": RGBColor(24, 24, 27),
+        "accent_light": RGBColor(228, 228, 231),
+        "danger": RGBColor(220, 38, 38),
+        "warning": RGBColor(161, 98, 7),
+        "info": RGBColor(82, 82, 91),
+        "font_heading": "Calibri",
+        "font_body": "Calibri",
+    },
+}
+
+
+def get_theme(theme_id: str) -> dict:
+    """Get a theme by its ID, defaulting to corporate_navy"""
+    return THEMES.get(theme_id, THEMES["corporate_navy"])
+
+
+def get_all_themes() -> list:
+    """Return list of all themes with metadata for the frontend"""
+    result = []
+    for tid, t in THEMES.items():
+        result.append({
+            "id": tid,
+            "name": t["name"],
+            "description": t["description"],
+            "preview_colors": t["preview_colors"],
+        })
+    return result

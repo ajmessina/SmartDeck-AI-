@@ -1,0 +1,14 @@
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+uploads/*
+!uploads/.gitkeep
+generated_pptx/*
+!generated_pptx/.gitkeep
+*.pptx
+*.log
+.DS_Store

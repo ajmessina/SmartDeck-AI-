@@ -1,0 +1,41 @@
+Q4 2024 Business Performance Summary
+
+Revenue Overview:
+- Total Revenue: $6.6M (up 75% YoY)
+- Q3 Revenue: $3.8M
+- Q4 Revenue: $2.8M
+- Target: $5.5M (exceeded by 20%)
+
+Customer Metrics:
+- Total Active Customers: 450
+- New Customers (Q4): 150
+- Customer Retention Rate: 95%
+- Average Deal Size: $14,000
+- Customer Acquisition Cost: $2,100
+
+Product Performance:
+- Enterprise Tier: 180 customers, $4.2M revenue
+- Professional Tier: 200 customers, $1.8M revenue  
+- Starter Tier: 70 customers, $600K revenue
+
+Geographic Distribution:
+- North America: 65% of revenue
+- Europe: 25% of revenue
+- Asia-Pacific: 10% of revenue
+
+Key Achievements:
+- Launched AI-powered analytics feature
+- Expanded to 3 new markets
+- Achieved 99.9% uptime
+- Net Promoter Score: 72
+
+Challenges:
+- Sales cycle increased to 45 days (from 38)
+- Competition intensified in mid-market
+- Engineering hiring behind target (12 of 18 roles filled)
+
+2025 Outlook:
+- Revenue Target: $12M (82% growth)
+- New Product Launch: Q1 2025
+- International Expansion: 5 new countries
+- Team Growth: 50 new hires planned
