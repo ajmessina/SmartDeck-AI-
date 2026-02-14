@@ -380,7 +380,7 @@ class IntelligenceService:
         """Mock response for prompt-based generation"""
         time.sleep(2)
         return {
-            "presentation_title": f"Presentación Generada desde Prompt",
+            "presentation_title": "Presentación Generada desde Prompt",
             "slides": [
                 {
                     "type": "title_slide",

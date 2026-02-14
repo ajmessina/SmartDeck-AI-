@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import google.generativeai as genai
 from dotenv import load_dotenv
-import os, sys, json
+import os
+import sys
+import json
 
 if sys.platform == 'win32':
     sys.stdout.reconfigure(encoding='utf-8')

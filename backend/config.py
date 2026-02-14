@@ -1,7 +1,6 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
 from typing import Set, Optional
-import os
 
 class Settings(BaseSettings):
     # App Settings

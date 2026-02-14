@@ -29,8 +29,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger("SmartDeck")
 
-from config import settings
-
 # Security Constants (using settings)
 # MAX_FILE_SIZE = settings.MAX_FILE_SIZE
 # MAX_FILES_PER_REQUEST = settings.MAX_FILES_PER_REQUEST

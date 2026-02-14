@@ -1,7 +1,7 @@
 from pptx import Presentation
-from pptx.util import Inches, Pt, Emu
+from pptx.util import Inches, Pt
 from pptx.enum.text import PP_ALIGN, MSO_ANCHOR, MSO_AUTO_SIZE
-from pptx.dml.color import RGBColor
+
 from pptx.enum.shapes import MSO_SHAPE
 from services.themes import get_theme
 import os
@@ -224,7 +224,7 @@ class PPTXBuilder:
         if len(bullets) <= 4:
             # Card layout - each bullet gets its own card
             cols = min(len(bullets), 2)
-            rows = math.ceil(len(bullets) / cols)
+
             card_w = 5.4
             card_h = 2.2
             start_x = 0.8
@@ -377,7 +377,6 @@ class PPTXBuilder:
             self._render_bullets(slide, bullets, 0.8, 1.7, 10.5, 4.8)
         else:
             cols = min(len(metrics), 3)
-            rows = math.ceil(len(metrics) / cols)
             card_w = (self.SLIDE_W - 2.0) / cols - 0.3
             card_h = 2.3
             
