@@ -31,7 +31,7 @@ class TestIntelligenceService(unittest.TestCase):
         
         self.assertIn("presentation_title", result)
         self.assertIn("slides", result)
-        self.assertEqual(result["presentation_title"], "Presentación Generada (Modo Demo)")
+        self.assertEqual(result["presentation_title"], "Q3 2024 Executive Business Review")
 
     @patch('services.intelligence.genai')
     def test_analyze_with_key_calls_model(self, mock_genai):
