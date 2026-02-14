@@ -1,6 +1,11 @@
-
+import sys
+import os
 import unittest
 from unittest.mock import patch, MagicMock
+
+# Add parent directory to path to find 'services' package
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from services.intelligence import IntelligenceService
 
 class TestIntelligenceService(unittest.TestCase):
