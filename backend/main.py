@@ -1,21 +1,25 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Request
-import secrets
-from slowapi import Limiter, _rate_limit_exceeded_handler
-from slowapi.util import get_remote_address
-from slowapi.errors import RateLimitExceeded
-from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import FileResponse, JSONResponse
-
 import shutil
 import os
 import re
 import uuid
+import sys
+import logging
+import secrets
 from typing import List, Optional
 
-from config import settings
+from fastapi import FastAPI, UploadFile, File, HTTPException, Form, Request
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse, JSONResponse
+from slowapi import Limiter, _rate_limit_exceeded_handler
+from slowapi.util import get_remote_address
+from slowapi.errors import RateLimitExceeded
 
-import logging
-import sys
+from config import settings
+from services.extractor import DataExtractor
+from services.intelligence import IntelligenceService
+from services.pptx_builder import PPTXBuilder
+from services.themes import get_all_themes
+from services.presentation_styles import get_all_styles
 
 # Configure Logging
 logging.basicConfig(
@@ -32,13 +36,6 @@ logger = logging.getLogger("SmartDeck")
 # MAX_FILES_PER_REQUEST = settings.MAX_FILES_PER_REQUEST
 # MAX_TOTAL_UPLOAD_SIZE = settings.MAX_TOTAL_UPLOAD_SIZE
 # ALLOWED_EXTENSIONS = settings.ALLOWED_EXTENSIONS
-
-# Import services
-from services.extractor import DataExtractor
-from services.intelligence import IntelligenceService
-from services.pptx_builder import PPTXBuilder
-from services.themes import get_all_themes
-from services.presentation_styles import get_all_styles
 
 app = FastAPI(title="Smart Presentation Generator", version="2.0.0")
 
